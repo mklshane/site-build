@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+* {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --color-border: var(--border);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground)
+
+}
+
+@layer base {
+  :root {
+    --background: #000000; /* Pure black */
+    --foreground: #E0FFE1; /* Soft white-green for readable text */
+  
+    --primary: #37ED3B; /* Neon green */
+    --primary-foreground: #0D0D0D; /* Dark gray for text on green buttons */
+  
+    --border: #2E2E2E; /* Subtle border for dark backgrounds */
+  }
+
+  .light {
+    --background: #F9F9F9;         /* Very light gray background */
+  --foreground: #0A0A0A;         /* Near-black text for good contrast */
+
+  --primary: #2DBE34;            /* Balanced green, still vibrant but less neon */
+  --primary-foreground: #FFFFFF; /* White text on green buttons */
+
+  --border: #D1D1D1;             /* Light gray for borders */
+
+  }
+  
+}
+
+
+  @utility link {
+    @apply relative transition duration-300 ease-in-out hover:text-[color:var(--primary)];
+  }
+
